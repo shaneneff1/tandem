@@ -11,18 +11,15 @@ on:
     branches: [ main ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
+jobs:
+
+  build-and-deploy:
+    runs-on: ubuntu-latest
     steps:
-- name: Azure Login
-  uses: Azure/login@v1
-  with:
-    # Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS
-    creds: 
-    # Set this value to true to enable Azure PowerShell Login in addition to Az CLI login
-    enable-AzPSSession: # optional
+
+    - name: Login via Az module
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZURE_CREDENTIALS}}
+        enable-AzPSSession: true 
