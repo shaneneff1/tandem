@@ -1,8 +1,8 @@
 variables:
   blueprintName: New-Project
   poolName: Hosted VS2017
-  serviceConnection: <yourConnectionName>
+  serviceConnection: tandem-demo-sc
   artifactName: Artifacts
   blueprintScope: ManagementGroupId
-  blueprintTargetProd: <yourProdSuborMgtGroup>
-  blueprintTargetDev: <yourDevSuborMgtGroup>
+  blueprintTargetProd: sandbox
+  blueprintTargetDev: sandbox
