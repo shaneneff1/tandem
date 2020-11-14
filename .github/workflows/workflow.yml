@@ -17,4 +17,3 @@ jobs:
           resourceGroupName: git
           template: test-template/azuredeploy.json
           parameters: test-template/azuredeploy.parameters.prod.json
-          deploymentName: deploy key vault test
