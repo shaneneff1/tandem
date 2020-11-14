@@ -1,16 +1,20 @@
 on: [push]
 
-name: AzureLoginSample
+name: AzureLogin
 
 jobs:
-
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-
+    - uses: actions/checkout@master
     - uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-    - run: |
-        az webapp list --query "[?state=='Running']"
+    - uses: azure/arm-deploy@v1
+      id: deploy
+      with:
+          subscriptionId: d8e89d1d-1f9a-4da7-8003-70837201537e
+          resourceGroupName: git
+          template: test-template/azuredeploy.json
+          parameters: test-template/azuredeploy.prod.json
+          deploymentName: deploy key vault test

@@ -1,0 +1,54 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "applicationName": {
+            "value": "shaneneff"
+        },
+        "certificatePermissions": {
+            "value": []
+        },
+        "enabledForDeployment": {
+            "value": true
+        },
+        "enabledForDiskEncryption": {
+            "value": false
+        },
+        "enablePurgeProtection": {
+            "value": true
+        },
+        "enabledForTemplateDeployment": {
+            "value": true
+        },
+        "enableSoftDelete": {
+            "value": true
+        },
+        "keysPermissions": {
+            "value": []
+        },
+        "location": {
+            "value": "eastus2"
+        },
+        "objectId": {
+            "value": 
+                "28afef69-6637-41e4-aad8-cdc7e9d2a4ae"
+        },
+        "secretsPermissions": {
+            "value": [
+                "Get",
+                "List",
+                "Set",
+                "Delete",
+                "Recover",
+                "Backup",
+                "Restore"
+            ]
+        },
+        "skuName": {
+            "value": "Standard"
+        },
+        "tenantId": {
+            "value": "6c637512-c417-4e78-9d62-b61258e4b619"
+        }
+    }
+}
