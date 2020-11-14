@@ -16,5 +16,5 @@ jobs:
           subscriptionId: d8e89d1d-1f9a-4da7-8003-70837201537e
           resourceGroupName: git
           template: test-template/azuredeploy.json
-          parameters: test-template/azuredeploy.prod.json
+          parameters: test-template/azuredeploy.parameters.prod.json
           deploymentName: deploy key vault test
